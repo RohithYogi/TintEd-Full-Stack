@@ -1,3 +1,20 @@
+<?php
+    include_once 'dbConnect.php';
+    if (isset($_POST['submit'])){
+        $uname = trim($_POST['name']); 
+        $email = trim($_POST['email']);
+        $upass = trim($_POST['password']);
+
+        // hash password with sha256
+        $password = hash('sha256',$upass);
+
+        $stmts = $conn->prepare("INSERT INTO users(username,email,password) VALUES(?, ?, ?)");
+        $stmts->bind_param("sss", $uname, $email, $password);
+        $res = $stmts->execute();//get result
+        $stmts->close();
+        $user_id = mysqli_insert_id($conn);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +36,7 @@
             <!-- <img src="images/signup-bg.jpg" alt=""> -->
             <div class="container">
                 <div class="signup-content">
-                    <form method="POST" id="signup-form" class="signup-form">
+                    <form method="POST" id="signup-form" class="signup-form-class">
                         <h2 class="form-title">Create account</h2>
                         <div class="form-group">
                             <input type="text" class="form-input" name="name" id="name" placeholder="Your Name"/>
@@ -28,7 +45,7 @@
                             <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
                             <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
                         </div>
                         <div class="form-group">
