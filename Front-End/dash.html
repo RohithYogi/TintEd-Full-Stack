@@ -28,50 +28,97 @@
 					<div class="row section-title">
 						<h1>Employee Dashboard</h1>
 						<p>6 sections</p>
+						<h2>Finish your profile for better chance of getting hired.</h2>
 					</div>
 					<div class="row">
 						<div class="col-lg-4 single-service">
 							<span class="lnr lnr-graduation-hat"></span>
 							<a href="#"><h4>Conventional Card</h4></a>
-							<p>
-								University graduated from or currently persuing along with CGPA.
-							</p>
+							<fieldset>
+						    <legend>University graduated from or currently persuing along with CGPA.</legend>
+						    University name:<br>
+						    <input type="text" name="IIT Hyderabad"><br>
+						    CGPA:<br>
+						    <input type="text" name="8/10 or 3.2/4"><br><br>
+						  </fieldset>
 						</div>
 						<div class="col-lg-4 single-service">
 							<span class="lnr lnr-briefcase"></span>
 							<a href="#"><h4>Experience Card</h4></a>
-							<p>
-								Previous courses/online courses taken,projects,internships,position of responsibility accomplished.
-							</p>
+							<fieldset>
+						    <legend>Previous online/offline taken,projects,internships,position of responsibility accomplished.</legend>
+						    Courses taken (online/offline):<br>
+						    <input type="text" name="courses"><br>
+						    Projects/Internships:<br>
+						    <textarea name="projects" rows="3" cols="20"></textarea><br><br>
+						    Position of responsibility:<br>
+						    <input type="text" name="manager"><br><br>
+						  </fieldset>
 						</div>
 						<div class="col-lg-4 single-service">
 							<span class="lnr lnr-thumbs-up"></span>
 							<a href="#"><h4>Intrests</h4></a>
-							<p>
-								State any five of your intrests in the fields you desire to work on.
-							</p>
+							<fieldset>
+						    <legend>State any five of your intrests in the fields you desire to work on.</legend>
+						    Intrest-1:<br>
+						    <input type="text" name="Data Science"><br>
+						    Intrest-2:<br>
+						    <input type="text" name="Sofware Engineering"><br>
+						    Intrest-3:<br>
+						    <input type="text" name="Networks"><br>
+						    Intrest-4:<br>
+						    <input type="text" name="Compilers"><br>
+						    Intrest-5:<br>
+						    <input type="text" name="Open Source"><br>
+						    <br>
+						  </fieldset>
 						</div>	
 						<div class="col-lg-4 single-service">
 							<span class="lnr lnr-user"></span>
 							<a href="#"><h4>Rank Card</h4></a>
-							<p>
-								Coding platform scores, test scores, last 6 months github contributions.
-							</p>
+							<fieldset>
+						    <legend>Coding platform scores, test scores, last 6 months github contributions.</legend>
+						    Coding platform scores:<br>
+						    <textarea name="projects" rows="3" cols="20"></textarea><br>
+						    GitHub contributions:<br>
+						    <textarea name="projects" rows="3" cols="20"></textarea><br><br>
+						    test yours skills at TintEd:<br>
+						    <input type="submit" value="Go"><br>
+						  </fieldset>
+							
 						</div>
 						<div class="col-lg-4 single-service">
 							<span class="lnr lnr-code"></span>
 							<a href="#"><h4>Application Card</h4></a>
-							<p>
-								Which position of responsibility are you applying for intern,job or a freelance. 
-							</p>
+							
+						    <legend>Which position of responsibility are you applying for intern,job or a freelance.</legend>
+						    Position you are looking for:<br><br>
+							 <form>
+							  <input type="radio" name="position" value="intern"> intern
+							  <input type="radio" name="position" value="job" checked> job
+							  <input type="radio" name="position" value="freelance"> freelance
+							</form> 
+							
 						</div>	
 						<div class="col-lg-4 single-service">
 							<span class="lnr lnr-file-add"></span>
 							<a href="#"><h4>Upload CV</h4></a>
-							<p>
+							<legend>
 								Upload your CV to the profile to help us get you better jobs.
-							</p>
-						</div>										
+							</legend>
+							<form>
+							Select a file: <input type="file" name="myFile" size="chars" ><br><br>
+							</form> 
+						</div>
+						<div class="col-lg-4 single-service">
+						</div>
+						<div class="col-lg-4 single-service">
+							<span class="lnr lnr-upload"></span>
+							<br><br>										
+							<input type="submit" value="Submit" style="text-align: center;">
+						</div>
+						<div class="col-lg-4 single-service">
+						</div>
 					</div>	
 				</div>	
 			</section>
